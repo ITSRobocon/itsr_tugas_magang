@@ -205,16 +205,13 @@ public:
             p1.printStatus();
             p2.printStatus();
             cout << "-----------------------\n";
-
-            // Giliran P1
+            
             playTurn(p1, p2);
             if (!p2.isAlive()) break;
 
-            // Giliran P2
             playTurn(p2, p1);
             if (!p1.isAlive()) break;
 
-            // Akhir Ronde: Pemulihan Stamina
             p1.recoverStamina();
             p2.recoverStamina();
             
